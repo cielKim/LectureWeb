@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src ="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		/*
+		$('h1').click(function(){
+			$(this).css('color','orange');
+		});
+		
+		$('h1').mouseenter(function(){
+			$(this).css('background-color' ,'lightgray');
+		});
+		
+		$('h1').mouseleave(function(){
+			$(this).css('background-color','white');
+		});*/
+			
+		$('h1').on({
+			"click" : function(){
+				//$(this).css('color','orange');
+				//$(this).css('background-color', 'red');
+				
+				$(this).css({
+					'color' : 'pink',
+					'background' : 'green'
+				});
+				
+				
+			},
+			"mouseenter" : function(){
+				$(this).css('background-color', 'lightgray');
+			},
+			"mouseleave" : function(){
+				$(this).css('background-color', 'white');
+			}
+		});
+				
+	});
+
+</script>
+</head>
+<body>
+	<h1>첫번째 문장입니다.</h1>
+	<br><br>
+	<h1>두번째 문장입니다.</h1>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var now = new Date();
+	
+//	alert(now.getFullYear() + "년" + (now.getMonth()+1) + "월" + (now.getDate()+1) + "일";
+
+	
+	Date.prototype.today = function(){
+		
+		return this.getFullYear() + "년" 
+			+ (this.getMonth()+1) + "월" 
+			+ this.getDate() + "일"		
+	};
+	
+	alert(now.today());
+	
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

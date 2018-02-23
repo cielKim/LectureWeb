@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	function clickBtn(){
+		//setTimeout('alert("5초 경과")', 5000);
+		setTimeout(function(){
+			alert('5초가 지났어!');
+		}, 5000); //콜백함수
+	}
+	
+</script>
+</head>
+<body>
+
+	<input type = "button" value ="클릭" onclick = "alert('클릭..')"/>
+	<input type = "button" value ="타이머" onclick = "clickBtn()"/>
+	
+
+</body>
+</html>

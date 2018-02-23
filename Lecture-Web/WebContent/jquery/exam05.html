@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src = "js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		alert('ready');
+		
+		//$('input:button').hide();
+		//$(':button').hide();
+		//$('button').hide();
+		$(':button').click(function(){
+			alert('클릭했어!');
+		});
+		
+		$(':button').click(function(){
+			$(this).hide();
+			
+		});
+		
+	});
+</script>
+</head>
+<body>
+
+	<h1>===========================================</h1>
+	<input type = "button" value ="버튼1">
+	<button >버튼2</button>
+	<h1>===========================================</h1>
+	
+
+</body>
+</html>

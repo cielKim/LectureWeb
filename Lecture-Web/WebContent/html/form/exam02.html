@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form>
+		<button>하이!</button><br/>
+		이메일: <input type="email" size="30"/><br/><!-- 이메일 형식이 아니면 오류남 -->
+		블로그: <input type="url" size="50" /><!-- http://의 프로토콜 형식이 아니면 오류남 -->
+		전화번호: <input type="tel" size=30 pattern="(010|011|016|017|018|019)-\d{3,4}-\d{4}" placeholder="XXX-XXXX-XXXX형식으로 입력해주세요"/><!-- 전화번호의 패턴을 정해주고 그 패턴에 맞지 않게 적으면 오류남 -->
+		<!-- 내가 형식을 정해서 그 형식에 맞지 않으면 오류가 나게끔 정해주는 것 --><br>
+		검색어: <input type = "search" size="30" /><br/><!-- 텍스트 입력시 X가 같이 뜸 -->
+		수량: <input type="number" size="10" max="10" min="1" step="2" /><br><!-- 수량은 정수만 받을 수 있는데, 그 때 정수만 받도록 하는 타입이 number -->
+		<!-- max는 최대수량 min은 최소수량 step은 늘어나는 숫자크기 -->
+		범위: <input type="range" min="1" max="10" /><br/>
+		날짜: <input type="date" value="2017-08-08" min="2017-01-01" max="2017-12-31"/><br/>
+		색상: <input type="color"/>
+ 		<input type="submit" value="전송"/>
+		
+	</form>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src ="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('body *').addClass('red');
+		$('body > *').addClass('blue'); //body의 바로 밑에 있는 태그들만 적용
+ 		$('.red').css('color','red');
+		$('.blue').css('color','blue');
+		
+		$('h1').removeClass('red');
+		$('.red').css('color','pink');
+	});
+	
+</script>
+</head>
+<body>	
+	<h1 class="c1">나는 문장입니다.</h1>
+	<h1>나는 두번째 문장입니다.</h1>
+	<div>
+		<h2>나는 세 번째 문장입니다.</h2>
+	</div>
+
+</body>
+</html>

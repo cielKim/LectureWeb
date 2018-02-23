@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src = "http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function({
+		$(':button').click(function(){
+			$.ajax({
+				url: "param03.jsp",
+				type: "get",
+				//data: "name=swan&age=29",
+				data: {'name' : 'swan', age: 25},
+				success: callback
+				
+			});
+		});
+	});
+	
+	function callback(data) {
+		$('#debug').val(data);
+		
+	}
+</script>
+</head>
+<body>
+	<textarea rows="7" cols="80" id="debug"></textarea>
+	<br>
+	이름: <input type="text" name="name"/>
+	나이: <input type="text" name="age"/>
+	<br>
+	<input type="button" value="호출"/>	
+	
+</body>
+</html>

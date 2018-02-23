@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	img{
+		width: 200px;
+		border: 1px solid red;
+	}
+
+
+</style>
+<script src = "js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('button').click(function(){
+			//$('img').last().prependTo('body');
+			$('img').first().appendTo('body');
+			
+			//last인 애를 잘라서 바디의 바로 아래에 붙이겠다는 얘기
+		});
+	});
+
+</script>
+</head>
+<body>
+
+	<img src ="images.selection/Chrysanthemum.jpg">
+	<img src ="images.selection/Desert.jpg">
+	<img src ="images.selection/Hydrangeas.jpg">
+	<img src ="images.selection/Jellyfish.jpg">
+	<img src ="images.selection/Koala.jpg">
+	<img src ="images.selection/Lighthouse.jpg">
+	<img src ="images.selection/Penguins.jpg">
+	<br><br>
+	<button>클릭</button>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="js/jquery-3.2.1.min.js"></script>
+<style type="text/css">
+	h1{
+		background: yellow;
+	}
+
+</style>
+<script type="text/javascript">
+	$(document).ready(function(){
+		/*$('h1').mouseenter(function(){
+			$(this).css('color', 'red');
+		});
+		$('h1').mouseleave(function(){
+			$(this).css('color','black');
+		});*/
+		
+		$('h1').hover(function(){
+			$(this).css('color','red');
+			},function(){
+				$(this).css('color','black');
+				};
+	
+	});
+</script>
+</head>
+<body>
+	<h1>마우스를 접근시켜보세요</h1>
+
+</body>
+</html>

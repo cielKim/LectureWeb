@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	태그명{
+	속성 : 값;
+	}
+	/* <!--절대 바꾸면 안된다 하는건 !important라고 하면 된다--> */
+	*{
+	color : pink
+	} //모든속성의 색깔을 바꾸는 것
+	p{
+	color : red !important 
+	}
+	p{
+	color:yellow;
+	background:gray;
+	}<!--나중에 나오는게 가장 최근 설정이 된다-->
+
+</style>
+</head>
+<body>
+	<p>Hello World</p>
+	<p>하이하이?</p>
+	<p style="color:black"> 나는 검정이고 싶다
+	<h2>HI...</h2>
+</body>
+</html>

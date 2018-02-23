@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src = "http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#editorBox').focus();
+		$('button').click(function(){
+			document.execCommand($(this).attr('id'), false, true);
+			
+		});
+		$('select').change(function(){
+			document.execCommand($(this).attr('id'),false,$(this).val());	
+		});
+		
+		
+	});
+</script>
+
+</head>
+<body>
+	<div align="center">
+		<button id="selectAll">전체선택</button>
+		<button id="delete">삭제</button>
+		<button id="bold"><b>가</b></button>
+		<button id="italic"><i>가</i></button>
+		<button id="underline"><u>가</u></button>
+		<br><br>
+		<button id="justifyLeft">왼쪽정렬</button>
+		<button id="justifyCenter">가운데정렬</button>
+		<button id="justifyRight">오른쪽정렬</button>
+		<br><br>
+		<select id="fontName">
+		<option>폰트</option>
+		<option value="궁서">궁서</option>
+		<option value="바탕">바탕</option>
+		<option value="굴림">굴림</option>
+		</select>
+		<select id="fontSize">
+		<option>크기</option>
+		<option value="1"> 4pt</option>
+		<option value="5"> 20pt</option>
+		<option value="7"> 30pt</option>
+		</select>
+		<select id="foreColor">
+		<option value="black"> 검정 </option>
+		<option value="red"> 빨강</option>
+		<option value="pink">핑크</option>
+		</select>
+		<select id="hiliteColor">
+		<option value="black">검정</option>
+		<option value="red">빨강</option>
+		<option value="pink">핑크</option>		
+		</select>
+		<div id="editorBox" contenteditable="true" style=" width:400px; height: 300px; border: 1px solid black">내용을 입력해라!</div>
+		
+	
+	</div>
+</body>
+</html>

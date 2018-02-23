@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	img{
+		width: 150px;
+		
+	
+	}
+</style>
+<script src = "js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+	/*	$('#next').click(function(){
+			$('img').last().prependTo('span');
+		});
+		*/
+		
+		$('#next').click(function(){
+			$('img').last().prependTo('#gallery');
+		});
+		
+/*		$('#prev').click(function(){
+			$('img').first().appendTo('span');
+		});
+		*/
+		
+		$('#prev').click(function(){
+			$('img').first().appendTo('#gallery');
+		});
+		
+		
+		setInterval(function(){
+			$('img').last().prependTo('#gallery');
+			
+		},1000);
+		
+		
+	});
+
+</script>
+</head>
+<body>
+	<button id="prev">prev</button>
+	
+	<span id="gallery">
+	<img src ="images.selection/Chrysanthemum.jpg">
+	<img src ="images.selection/Desert.jpg">
+	<img src ="images.selection/Hydrangeas.jpg">
+	<img src ="images.selection/Jellyfish.jpg">
+	<img src ="images.selection/Koala.jpg">
+	<img src ="images.selection/Lighthouse.jpg">
+	<img src ="images.selection/Penguins.jpg">
+	</span>
+	
+	<button id="next">next</button>
+	
+
+</body>
+</html>

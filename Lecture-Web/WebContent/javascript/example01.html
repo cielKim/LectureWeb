@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+
+	
+function clickBtn(){
+	
+	var spanObj = document.getElementById("spanObj");
+	spanObj.innerHTML=parseInt(spanObj.innerHTML)+1;
+
+}
+
+</script>
+</head>
+<body>
+	
+	<span id="spanObj">0</span>번 클릭
+	<input type="button" value="클릭!" onclick="clickBtn()">
+	
+</body>
+</html>

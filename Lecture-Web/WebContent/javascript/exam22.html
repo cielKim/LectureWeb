@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+/**
+ *  브라우저 객체모델 (BOM)
+ *  window객체
+ 		-location객체
+ 		-navigator객체
+ 		-history객체
+ 		-screen객체 : 내 화면크기가 얼마냐?
+ 		-document객체: 문서내용?
+ 		
+ 		*/
+ window.alert('hello'); //alert도 윈도우객체 중 하나였지만 window생략해도 실행된다. 
+ //window.onload('');
+ 
+ //window.open('/html/exam/calc.html');
+ 
+ 
+ var sub = window.open('', '', 'width=400, height=300');//리턴값 트루 펄스
+ if(!sub){
+	 alert('팝업창 해제를 선택해주세요');
+	 
+ }
+ 
+ sub.moveTo(100, 100); //띄운 팝업창의 위치를 x축 y축 방향으로 움직이게 해주는 것
+ 
+ //setInterval(행동function(),interval-단위ms); 
+ setInterval(function(){sub.moveBy(20,10)}, 100);// 1초마다 function수행
+ 
+</script>
+</head>
+<body>
+
+</body>
+</html>

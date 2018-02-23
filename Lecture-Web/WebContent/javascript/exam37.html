@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>배열값 출력이 목적이다!</title>
+</head>
+<script type="text/javascript">
+ 	var nums = [10, 20, 30, 40, 50];
+ 	
+ 	for(var index = 0 ; index < nums.length ; index++){
+ 		document.write(index + '번 째 변수 : ' + nums[index] + '<br/>');
+ 	}
+ 	
+ 	document.write('<hr/>');
+ 	
+ 	for(var index in nums) {
+ 		document.write(index + '번 째 변수 : ' + nums[index] + '<br/>');
+ 		
+ 	}
+ 	document.write('<hr/>');
+
+ 	nums.forEach(function(element, index, nums) {
+ 		nums[index]++;
+ 		document.write(index +'번 째 변수 : ' + element + '<br/>');
+ 	});
+ 	document.write(nums + '<br/>');
+ 	
+ 	
+ /*	var copyNums = [];
+ 	for(var i in nums){
+ 		copyNums[i] = nums[i];
+ 	}*/
+ 	
+ 	var copyNums = nums.map(function(element) { 
+ 		
+ 		return element + 100;
+ 		
+ 	});	
+ 	
+ 	
+ 	document.write("nums : " + nums + '<br/>' );
+ 	document.write("copyNums : " + copyNums + '<br/>');
+ 	
+ 	
+</script>
+<body>
+
+</body>
+</html>

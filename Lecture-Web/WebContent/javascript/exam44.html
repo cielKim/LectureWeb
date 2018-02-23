@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function showInfo() {
+	/*	var length = document.inputForm.hobby.length;
+		for(var i = 0 ; i<length ; i++){
+			if(document.inputForm.hobby[i].checked == true){
+				alert(document.inputForm.hobby[i].value);
+				
+			}
+		}*/
+		
+		var list = "";
+		var hobby = document.inputForm.hobby;
+		for(var i in hobby){
+			if(hobby[i].checked){
+				list += hobby[i].value + '\n';
+				
+			}
+				
+		}
+		
+		alert(list);
+		
+	}
+	
+	function allClick() {
+		var hobby = document.inputForm.hobby;
+
+		for(var i in hobby) {
+			hobby[i].checked=true;
+		}
+	}
+	
+	function cancelClick(){
+		var hobby = document.inputForm.hobby;
+
+		for(var i in hobby) {
+			hobby[i].checked=false;
+		}
+	}
+	
+	function toggle(check) {
+		var hobby = document.inputForm.hobby;
+		for(var i=0 ; i<hobby.length ; i++){
+			hobby[i].checked = check;
+		}
+		
+	}
+	
+	
+	function toggle() {
+		var check = false;
+		var cnt = 0;
+		var hobby = document.inputForm.hobby;
+		
+		for(var i=0 ; i<hobby.length && cnt == i ; i++){
+			if(hobby[i].checked)
+				cnt++;
+		}
+		if(cnt != hobby.length)
+			check = true;
+		
+		for(var i=0 ; i<hobby.length ; i++){
+			//hobby[i].cheked = !hobby[i].checked;
+			hobby[i].checked = check;
+		}
+		
+	}
+</script>
+</head>
+<body>
+	<form action="" name="inputForm">
+	당신의 취미는?<br/>
+	<input type ="checkbox" name="hobby" value="listenToMusic"/>음악감상<br/>
+	<input type ="checkbox" name="hobby" value="watchMovies"/>영화감상<br/>
+	<input type ="checkbox" name="hobby" value="readingBooks"/>독서<br/>
+	<input type ="checkbox" name="hobby" value="playGames"/>게임<br/>
+	
+	<!-- <input type="button" value="전체선택" onclick="toggle(true)"/>
+	<input type="button" value="선택해제" onclick="toggle()"/> -->
+	
+	<input type="button" value="전체선택/해제" onclick="toggle()"/>
+	
+	
+	<input type="button" value="결과보기" onclick="showInfo()"/>
+	
+	
+	</form>
+</body>
+</html>

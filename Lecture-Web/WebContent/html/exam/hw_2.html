@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	count = 0;
+	var arrays = new Array();
+	
+	while(true){
+		var add = prompt("데이터 입력해줭 종료는 quit");
+		if(add.toString() == "quit")
+			break;
+		count++;
+		arrays.push(add);
+	}
+	var list = "";
+	for(var index in arrays){
+		list += arrays[index] + ",";
+		
+	}
+	alert(list + "  " + count);
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+/*		$('h1').fadeOut(3000);
+		alert('완료!'); */
+		
+/*		$('h1').fadeOut(3000, function(){
+			
+			alert('완료!');
+		});
+		
+		
+	});*/
+	
+	
+	/*	$('h1').show(3000, function(){
+			$(this).css('color', 'blue');
+			$(this).slideUp(2000);
+			$(this).slideDown(2000, function(){
+				$(this).css('background-color' , 'pink');
+			});
+			
+		});
+	});*/
+		$('h1').show(3000, function(){
+			$(this).css('color','blue')
+			.slideUp(3000)
+			.slideDown(3000, function(){
+				$(this).css('background','pink');
+			});
+		});
+	
+		$('div').animate({
+			top:'0px',
+			opacity : 1
+		},1000, function(){
+			$(this).css('background-color', 'pink');
+	
+		});
+	
+	
+	
+	
+	});
+</script>
+</head>
+<body>
+	<!-- 3초에 걸쳐서 h1태그 문장을 안 보이게 한 후 '완료!'라는 경고창 생성 -->
+	<!-- 3초동안 첫번째 문장이라고 보인 후 글자색을 파란색으로 변경한 후, 슬라이드 효과로
+	올라갔다 내려갔다 한 후 배경색을 핑크로 변경 -->
+	<h1>첫번째 문장</h1>
+	<div></div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	div{
+		border : 2px solid red;
+	}
+</style>
+<script src = "js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('button').click(function(){
+		//	$('p').remove();
+		//	$('div').remove();
+		//	$('div').empty();
+		//	$('#p01').remove();
+		//	$('#p01').empty();
+		
+		//	$('p.c01').remove(); //p태그 중에서 c01인 클래스를 지워줘!
+		//	$('p').remove('.c01'); //위와 같은 말임
+			
+		//	$('p').remove('.c01, #p02'); //p태그 중에서 01클래스랑 p02아이디 지워줘
+		//	$('p.c01, #p02').remove(); 위랑 같은 말임
+		
+		
+		
+		});
+		
+	});
+
+</script>
+</head>
+<body>
+	<div>
+		<p id="p01"> 나는 김성은입니다.</p>
+		<mark class="c01"> 나는 진짜 김성은입니다.</mark><br>
+		나는 완전 정말 진짜 김성은입니다.<br>
+		<p class="c01"> 나는 진짜 대박 초초초 김성은입니다.</p>
+	</div>
+	<p id="p02">나는 김성은이 아닙니다.</p>
+	<button>삭제</button>
+
+</body>
+</html>

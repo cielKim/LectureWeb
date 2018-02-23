@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	input[type=text] {/*input을 생략하면 속성명이 type인 애들 모두를 말하게 됨*/
+	
+		background-color: pink;
+		
+	
+	}
+	
+	img {
+		width: 300px;
+		height: 300px;
+		border: 2px solid red;
+		
+		
+	
+	}
+	
+	
+	[src="image/Lee.gif"] {
+	border: 8px solid blue;
+	}
+	
+	[src$=png]{
+	border: 3px solid green;
+	}
+	
+	[src^=image]{
+	
+	border: 1px solid pink;
+	
+	}
+
+</style>
+</head>
+<body>
+	<form>
+		아이디: <input type="text" autofocus="autofocus"/><br/>
+		패스워드: <input type="password"/><br/>
+	</form>
+	<img src = "image/나는롯덷.jpg">
+	<img src="image/아이콘.png">
+	<img src="image/140420_2.gif">
+	<img src="image/icon2.jpg">
+	<img src="image/Lee.gif">
+	<img src="http://tveta.naver.net/libs/1159/1159704/20170428212907-pwdmI0MP.png">
+	
+</body>
+</html>

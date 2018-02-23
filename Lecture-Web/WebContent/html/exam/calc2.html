@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function cal(num){
+		document.myform.screen.value += num;
+	}
+	
+	function answer(){
+		
+		document.myform.screen.value = eval(document.myform.screen.value);
+	}
+	
+	function clearcal(){
+		document.myform.screen.value="";
+	}
+
+</script>
+</head>
+<body>
+	<form name = "myform">
+	<table border="1">
+	
+
+	
+		
+		<tr>
+		<td colspan = "4"><input type = "text" size = "20" name = "screen"></td>
+		
+		</tr>
+		
+		<tr>
+		<td><input type="button" value="7" onclick = "cal('7')"></td>
+		<td><input type="button" value="8" onclick = "cal('8')"></td>
+		<td><input type="button" value="9" onclick = "cal('9')"></td>
+		<td><input type="button" value="/" onclick = "cal('/')"></td>
+		</tr>
+		
+		<tr>
+		<td><input type="button" value="4" onclick = "cal('4')"></td>
+		<td><input type="button" value="5" onclick = "cal('5')"></td>
+		<td><input type="button" value="6" onclick = "cal('6')"></td>
+		<td><input type="button" value="*" onclick = "cal('*')"></td>
+		</tr>
+		
+		<tr>
+		<td><input type="button" value="1" onclick = "cal('1')"></td>
+		<td><input type="button" value="2" onclick = "cal('2')"></td>
+		<td><input type="button" value="3" onclick = "cal('3')"></td>
+		<td><input type="button" value="-" onclick = "cal('-')"></td>
+		</tr>
+		
+		<tr>
+		<td><input type="button" value="0" onclick = "cal('0')"></td>
+		<td><input type="button" value="." onclick = "cal('.')"></td>
+		<td><input type="button" value="+" onclick = "cal('+')"></td>
+		<td><input type="button" value="%" onclick = "cal('%')"></td>
+		</tr>
+		
+		<tr>
+		<td colspan = "2"><input type="button" value="=" onclick = "answer()"></td>
+		<td colspan = "2"><input type="button" value="clear" onclick = "clearcal()"></td>
+	
+		</tr>
+		
+		
+	
+	</table>
+	</form>
+</body>
+</html>

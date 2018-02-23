@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	var str = "alert('Hello');"; 
+		str += "var num = 10;";
+		str += "alert('num : ' + num);";
+		str += "var array = [10, 'A', 12.34, false];";
+		str += 'alert("배열의 요소개수: " + array.length + "개");';
+		str += 'alert("배열의 내용: " + array );';
+		
+	eval(str);
+	//스트링에 자바스크립트 문법이 있더라. 그러면 문자열로 나열해주는게 아니라 실제로 실행해주고 싶은 경우 쓰는 함수
+	
+	num += 30;
+	alert("num : " + num);
+	//위에 var에서 있던 변수 num은 계속해서 살아있다. eval에 의해서 만들어진 변수도 연속성을 가지고 있음.
+	
+	
+	
+	
+	
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

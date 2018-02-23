@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	window.onload = function() {
+		var header1 = document.getElementById("header1");
+		//document에서 id로 태그를 찾고싶을 때 쓰는 함수 - 맨 위에있는 아이디만 찾아줌 그래서 return값은 단수
+		console.log(header1); //콘솔에 header1이 어떤 소스를 갖고 있는지 보여준다
+		console.log(header1.innerHTML);
+	//	header1.innerHTML = 'JAVA script'; 	//태그를 쓰면 그건 태그로 인식해서 보여줌
+		header1.innerText = 'JAVA script'; //태그를 써도 그 태그를 글자로 보여줌
+	}
+
+</script>
+</head>
+<body>
+	
+	
+	
+	<h1 id = "header1">Header1</h1>
+	<h2>Header2</h2>
+	
+	
+</body>
+</html>

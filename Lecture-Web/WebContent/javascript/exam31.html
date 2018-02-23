@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+   function Person(name, phone, addr) {
+      this.name = name;
+      this.phone = phone;
+      this.addr = addr;
+   }
+
+   Person.prototype.hobby = '음악 감상';
+
+   Person.prototype.info = function() {
+      console.log(typeof this.name); //String 타입
+      console.log(typeof this.info); //function 타입
+
+      var data = "";
+      for ( var key in this) {
+         //if(key!='info') //------------------- info일때는 해당 코드가 실행되지 ㅇ낳도록
+         if (typeof this[key] != 'function') // 단순히 key가 아니라 Person의 key의 값이 function인지 아닌지
+            data += key + " : " + this[key] + "\n";
+      }
+      alert(data);
+   };
+   
+   function Doctor(name, phone, addr, major){
+       
+      
+      /*
+      this.name = name;
+      this.phone = phone;
+      this.addr = addr; */
+   
+      //person의 정보를 여기로 가지고 오게끔 만들려면? 방법 3가지
+      //1번      
+      /* this.base = Person;
+      this.base(name, phone, addr);
+      */ 
+      
+      //2번 
+      /*
+      Person.call(this, name, phone, addr) //Person함수를 호출하는데. 그 대상을 내 객체에다가 만들라. 그 변수는  name, phone, addr이다.
+      this.major = major;
+      */
+      
+      //3번
+      Person.apply(this, arguments); //call 함수로 호출하는 것과 비슷한 의미. 다른 점은 이름에 따라서 mapping되는 것이 아니라 순서대로 arguments로 통째로 넘겨준다는 의미
+      this.major = major;
+   }
+   
+   Doctor.prototype = Person.prototype;
+   
+   var person2 = new Person("김", "45678", "김천시");
+   person2.info();
+   
+   var d = new Doctor("박의사", "1111", "서울시", "흉부외과");
+   d.info();
+</script>
+</head>
+<body>
+
+</body>
+</html>

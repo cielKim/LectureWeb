@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+
+	#div01{
+	position: re
+	lative;  
+	/*absolute 위 옆에있는 공간, 여백이 없이 설정해준 위치에 생김*/
+	/*relative 밑에서 위치를 정해주면 바뀜, 여백존재*/
+	/*static 기본값: 맨 위 , static이 존재하면 밑에서 위치를 정해줘도 위치가 안 바뀐다. 여백존재*/;
+	background-color: red;
+	height: 400px;
+	width: 400px;
+	top: 0px;
+	left: 100px;
+	
+	/* bottom, right*/
+	}
+	
+	#div02{
+	position: absolute;
+	height: 100px;
+	width: 100px;
+	background-color: blue;
+	top: 100px;
+	left: 300px;
+	/*absolute는 위에 만들어진 도형을 기준으로 위치가 정해지는 거*/
+	}
+
+</style>
+</head>
+<body>
+
+	<div id="div01">첫번째</div>
+	<div id="div02">두번째</div>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	window.onload = function(){
+		var node = document.getElementsByTagName("td");
+		//node[0].innerHTML = '아이디';
+		//node[1].innerHTML = '비밀번호';
+		
+		var tag = document.querySelector('td');
+		console.log(node);
+		
+		/*
+		querySelector(태그명) : 맨 처음으로 검색된 태그 반환 
+		태그는 두개가 있지만, 가장 처음으로 나온 태그만 찾기 때문에 둘 다 나오진 않는다.
+		querySelectorAll(태그명) : 검색된 모든 태그를 반환
+		
+		*/
+		var nodes = document.querySelectorAll("td");
+		console.log(nodes);
+		node[1].innerHTML = '패스워드';
+		
+		
+	}
+</script>
+</head>
+<body>	
+	<table border = "1" style = "width: 100px; height: 100px;">
+	
+		<tr>
+			<td> ID </td>
+		</tr>
+		<tr>
+			<td> password </td>
+		</tr>
+		
+	</table>
+
+</body>
+</html>

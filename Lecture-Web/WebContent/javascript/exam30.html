@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function Person(name, phone, addr) { 
+		this.name=name;
+		this.phone = phone;
+		this.addr = addr;
+		
+		
+	}
+	
+	Person.prototype.hobby = '음악감상';
+	
+	
+	Person.prototype.info = function(){
+		
+		var data = "";
+		for(var key in this){
+			if(typeof this[key] != 'function')
+			data += key + " : " + this[key] + "\n";
+			
+		}
+		alert(data);
+	};
+	
+	
+	var p = new Person('홍', '아러ㅏㅇ러','오라어랑');
+	
+
+	p.info();
+	
+	function Doctor(major){
+		
+		this.major = major;
+	}
+	
+	Doctor.prototype=Person.prototype;
+//프로토타입을 누굴 가지고 있느냐에 따라서 상속의 개념을 갖는다. 	
+	var d = new Doctor('신경외과');
+	d.info();
+
+	alert(p instanceof Person);
+	alert(d instanceof Doctor);
+	alert(d instanceof Person);
+	
+	
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

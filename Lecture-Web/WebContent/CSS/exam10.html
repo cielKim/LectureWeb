@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+/*너비가 300픽셀이고 테두리가 빨간색 실선인 사각형 2개
+*/
+
+	div{
+	width : 300px;
+	/*border-color : red;
+	border-style : solid;
+	border-width : 1px;*/
+	border : 1px solid red;
+	padding : 10px;
+	/*padding left, top, right, bottom*/
+	text-align : center;
+	margin : 10px;
+	/*margin left, top, right, bottom*/
+	float : left;	
+	}
+	
+	.div01 {
+	
+	border-radius : 40px; /*20% 처럼 퍼센트로도 쓸 수 있음*/
+
+	}
+	
+	.div02 {
+	border-width : 4px;
+	
+	/*border-radius : 20px;
+	border-top-left-radius : 0px;
+	border-bottom-right-radius : 0px;*/
+	
+	border-top-right-radius: 20px;
+	border-bottom-left-radius: 20px;
+	
+	}
+	
+</style>
+</head>
+<body>
+
+	<div class="div01">사각형1</div>
+	<div class="div02">사각형2</div>
+
+
+</body>
+</html>

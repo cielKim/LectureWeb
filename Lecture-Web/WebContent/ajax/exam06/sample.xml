@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<members>
+
+	<member>
+		<id>swan1</id>
+		<name>정수환</name>
+	</member>
+	<member>
+		<id>swan2</id>
+		<name>장숭환</name>
+	</member>
+	<member>
+		<id>swan3</id>
+		<name>장송황</name>
+	</member>
+
+</members>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	#buttons{
+		width: 400px;
+		height: 200px;
+		border: 2px solid #9DCEFF;
+		background: #D9E5FF;
+		text-align: center;
+		border-radius: 10px;
+	
+	
+	}
+
+</style>
+<script src = "/Lecture-Web/jquery/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+
+	function loader(){
+		iframe = document.getElementById("content");
+		iframe.contentDocument.designMode = "on";
+		
+	}
+	
+    window.addEventListener(“loader”, onload, false);
+
+	/*
+	$(document).ready(function(){
+		$('#selectAll').click(function(){
+			
+		});
+		$('#bold').click(function(){
+			
+		});
+		$('#italic').click(function(){
+			
+		});
+		$('#underline').click(function(){
+			
+		});
+		
+	});*/
+
+</script>
+</head>
+<body onload="loader()">
+	<div id="buttons">
+		<p class="font">
+			<button id="sellectAll" >전체선택</button>
+			<input type="button" value="굵게" onclick='iframe.contentDocument.execCommand(‘bold’, false, null);'></button>
+			<input type="button" value="기울이기" onclick='iframe.contentDocument.execCommand(‘italic’, false, null);'></button>
+			<input type="button" value="밑줄긋기" onclick='iframe.contentDocument.execCommand(‘underline’, false, null);'></button>
+		</p>
+		<p class="sort">
+			<button id="left">왼쪽정렬</button>
+			<button id="center">가운데정렬</button>
+			<button id="right">오른쪽정렬</button>
+		</p>
+		
+		<p class="select">
+   			 <select name="fontfamily" id="fontfamily">
+   			 <option selected="selected">폰트</option>
+			 <option>궁서</option>
+			 <option>굴림</option>
+			 <option>바탕</option>
+			 </select>
+
+   			 <select name="fontsize" id="fontsize">
+   			 <option selected="selected">크기</option>
+			 <option>10pt</option>
+			 <option>15pt</option>
+			 <option>20pt</option>
+			 <option>25pt</option>
+			 <option>30pt</option>
+			 </select>
+			 
+			 			
+   			 <input type="color" id="fontcolor"><font size="1pt">글자색</font>
+   			 <input type="color" id="background"><font size="1pt">글자배경색</font>
+   
+		</p>		
+	</div>
+	
+	 <iframe id="content" style="height:300px; width:400px; overflow:scroll">
+
+
+    </iframe>
+	
+	
+
+</body>
+</html>

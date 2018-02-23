@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function clickBtn(){
+	var display = document.getElementById("display");
+	alert(display.value);
+	display.value='난 안 빈칸이지롱';
+		
+	}
+</script>
+</head>
+<body>
+	<input type= "text" value ="빈칸이양" id = "display"/><br/>
+	<input type="button" value ="클릭" onclick="alert('클릭했어..')"/>
+	<input type="button" value ="변경" onclick="clickBtn()"/>
+</body>
+</html>

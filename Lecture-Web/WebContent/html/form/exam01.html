@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="http://www.naver.com"><!-- form태그: 클라이언트에게 받은 내용을 서버쪽으로 전달해주는 뭐 그런... 태그? -->
+		아이디: <input type="text" size="30"/><!-- 30글자의 텍스트를 입력받을 수 태그 --><br/>
+		패스워드: <input type="password" size="30"/> <br/> <!-- insert할 때 입력하는 글자를 안 보이게 해주는 태그 -->
+		<input type="submit" value="확인"/><!-- 사용자의 입력을 받는 태그 --><!-- 인풋에서 받은 내용을 action의 url에게 넘여주어라 지금의 경우는 네이버로 넘겨주라는 얘기 -->
+		<!--submit: submit을 누르면 action밑의 주소로 내용을 넘겨라 --><br/>
+		
+		<strong>희망연봉</strong><br/>
+		2000-2500 2500-2800 2800-3200 3200이상 <br/>
+		<input type = "radio" name="salary"/> 2000-2500
+		<input type = "radio" name="salary"/>	2500-2800
+		<input type = "radio" name="salary"/>	2800-3200
+		<input type = "radio" name="salary"/>	3200이상 
+		<!-- name으로 묶어주면 이 그룹끼리 중에서 한개만 선택할 수록 있게 하는것  -->
+		<!-- radio : 단일선택 --><br/><br/>
+		
+		<strong>사용언어(중복선택가능)</strong>
+		<input type="checkbox" name="lang"/>C
+		<input type="checkbox" name="lang"/>C++
+		<input type="checkbox" name="lang"/>JAVA
+		<input type="checkbox" name="lang"/>HTML
+		<input type="checkbox" name="lang"/>JAVASCRIPT
+		<input type="checkbox" name="lang"/>JSP
+		<input type="checkbox" name="lang"/>PHP
+		<br/><br/>
+		
+		<strong>취미선택(다중선택가능)</strong>
+		<input type="checkbox" name="hobby"/>등산
+		<input type="checkbox" name="hobby"/>음악감상
+		<input type="checkbox" name="hobby"/>영화보기
+		<input type="checkbox" name="hobby"/>잠자기
+		
+		<br/>
+		
+		자기소개<textarea rows="7" cols="50"></textarea><!-- 한 줄에 50글자씩 7줄 보여주고 싶어 --><br/><br/>
+		
+		첨부파일: <input type="file" size="50"/><br/>
+		
+		<input type="button" value="나 눌러봐랑 힝"><br/>
+		
+	</form>
+	
+</body>
+</html>

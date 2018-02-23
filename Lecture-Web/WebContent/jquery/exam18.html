@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src = "js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		alert('하이');
+
+		$('#btn01').click(function(){
+			//이건 자바스크립트: document.getElementById("p01")innerText="문장이 변환되었습니다.";
+			$('#p01').text('<b>문장이 변환되었습니다.</b>');
+			
+		});
+		
+		$('#btn02').click(function(){
+			$('#p02').html('<b>문장이 변환되었습니다.</b>');
+			//document.getElementById("p02").innerHTML = "<b>문장이 변환되었습니다.</b>";
+		});
+		
+		$('#btn03').click(function(){
+			//document.setAttribute('href', 'http://daum.net');
+			$('#site').attr('href','http://daum.net');
+			$('#site').attr('target', '_blank');
+			alert('주소변환이 완료되었습니다.');
+		});
+		$('#btn04').click(function(){
+			/*var pTag = document.getElementsByTagName("p");
+			var pTag = document.querySelectorAll("p");
+			var length = pTag.length;
+			for(var i=0 ; i<length; i++){
+				pTag[i].innerText = i + '문장변환';
+			}*/
+			
+			$('p').text('문장변환'); //html은 문장을 하나만 가져오니까 이게 적용이 안 된다. 
+			
+			$('p').text(function(i, innerText){
+				alert(innerText);
+				return i +" : " + innerText;
+			});
+			
+			
+		/*	$('p').text(function(i, innerText){
+				alert(innerText);
+				return i + " : 문장변환";
+			});
+		*/
+			
+			
+		});
+		
+	});
+
+	
+</script>
+</head>
+<body>
+	<p id = "p01">첫번째 문장입니다.</p>
+	<p id = "p02">두번째 문장입니다.</p>
+	<a href = "http://www.naver.com" id="site">사이트 이동</a><br>
+	
+	<button id="btn01">TEXT변환</button>
+	<button id="btn02">HTML변환</button>
+	<button id="btn03">주소변환</button>
+	<button id="btn04">문장변환</button>
+
+</body>
+</html>

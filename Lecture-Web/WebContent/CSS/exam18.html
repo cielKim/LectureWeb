@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+
+	/*#header h1{
+	color : red;
+	}*/
+	
+	/*#header > h1 { header가 가지고 있는 자식들 중에서 h1들을 의미
+		color : red;
+	}*/
+
+	#header * { /*header에 있는 애들 모든 속성들*/
+	color : red;	
+	
+	}
+	
+</style>
+</head>
+<body>
+
+	<div id = "header">
+		<h1>내가 제목이다!</h1>
+		<div id="sub_header">
+			<h1>나는 소제목이다!!</h1>
+			<h3>나는 소제목2이다!!</h3>
+		</div>
+		<h2>내가 제목2이다!</h2>
+		<h1>내가 제목3이다!</h1>
+	</div>
+	
+	<div id="content">
+	
+		<h1>내가 본문이다</h1>
+		<p>나도 본문이다</p>
+		
+	</div>
+
+</body>
+</html>

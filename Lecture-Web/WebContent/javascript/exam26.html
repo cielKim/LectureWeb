@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	 function makePerson(name, phone, addr){
+		var person={
+				name : name,
+				phone : phone,
+				addr : addr,
+				info : function(){
+					alert(
+					"name: " + this.name + "\n"
+					+"phone:" + this.phone + "\n"
+					+"addr: " + this.addr + "\n"
+					);
+					
+					
+				}
+				
+		};
+		
+		return person;
+	}
+	 
+	 var persons = [];
+	 
+/*	 persons[0] = makePerson("김성은", "010-8786-8426", "수원시 권선구 권선동");
+	 persons[1] = makePerson("조여진", "삐리리 삐리리", "어딘가에 살아요");
+	 persons[2] = makePerson("이주호", "빠라빠라", "둘째 줄 셋째자리");*/
+	 
+	 Persons.push(makePerson("김성은", "010-8786-8426", "수원시 권선구 권선동"));
+	 Persons.push(makePerson("조여진", "삐리리 삐리리", "어딘가에 살아요"));
+	 Persons.push(makePerson("이주호", "빠라빠라", "둘째 줄 셋째자리"));
+	 
+	 for(var i in persons) {
+		 
+		 persons[i].info();
+		 
+	 }
+	 
+/*	 var person01 = makePerson("김성은", "010-8786-8426", "수원시 권선구 권선동");
+	 var person02 = makePerson("조여진", "삐리리 삐리리", "어딘가에 살아요");
+	 var person03 = makePerson("이주호", "빠라빠라", "둘째 줄 셋째자리");
+	
+	 
+	 person01.info();
+	 person02.info();
+	 person03.info();*/
+
+	 
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

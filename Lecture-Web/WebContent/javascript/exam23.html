@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var sub = window.open('','', 'width=400, height=300');
+	alert('@@');
+	//sub.resizeTo(800,200);
+	var width = screen.width;
+	var height = screen.height;
+	
+	sub.resizeTo(width, height);
+	sub.moveTo(0,0);
+	
+	var cnt = 0;
+	var interval = setInterval(function(){
+		sub.resizeBy(-20,-20);
+		sub.moveBy(10, 10);
+		
+		if(++cnt == 5)
+		{ clearInterval(interval);
+		}
+	
+	}, 1000);
+		
+	
+	var interval02 = setInterval(function(){
+		sub.resizeTo(width, height);
+	}, 10000);
+</script>
+</head>
+<body>
+
+</body>
+</html>

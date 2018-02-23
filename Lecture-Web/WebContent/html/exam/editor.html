@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>EDITOR</title>
+<script src="/Lecture-Web/jquery/js/jquery-3.2.1.min.js"></script>
+<script>
+	document.execCommand('styleWithCSS', false, true);
+  	document.execCommand('insertBrOnReturn', false, true);
+	$(document).ready(function() {
+		$('#editorBox').focus();
+		$('button').click(function(){
+     		document.execCommand($(this).attr('id'), false, true);
+   		});
+		$('select').change(function(){
+     		document.execCommand($(this).attr('id'), false, $(this).val());
+    	});	
+	});
+</script>
+<style>
+
+	#bg {
+		width: 550px;
+		height: 650px;
+		background: wheat;
+		padding: 5px;
+	}
+	.align {
+		width: 15px;
+		height: 15px;
+	}
+	
+	#editorBox {
+	   
+		width: 460px;
+		height: 300px;
+		padding: 5px;
+		background-color: white;
+		background-attachment: scroll;
+	    overflow: auto;
+	    resize: both;
+	}
+</style>
+</head>
+<body>
+	<div id="bg" align="center">
+		<br/>
+		<h2>TEXT EDITOR</h2>
+		<br/>
+		<button id="selectAll">전체선택</button>
+		<button id="delete">삭제</button>
+		<button id="bold"><b>가</b></button>
+		<button id="underline"><u>가</u></button>
+		<button id="italic"><i>가</i></button>
+		<br/><br/>
+		<button id="justifyLeft">왼쪽정렬</button>
+		<button id="justifyCenter">가운데정렬</button>
+		<button id="justifyRight">오른쪽정렬</button>
+		<br/><br/>
+		<select id="fontName">
+			<option>폰트</option>
+			<option id="굴림">굴림</option>
+			<option id="바탕">바탕</option>
+			<option id="궁서">궁서</option>
+		
+		</select>
+		<select id="fontSize">
+			<option value="1">4px</option>
+	        <option value="2">8px</option>
+	        <option value="3">10px</option>
+	    </select>
+		<select id="foreColor">
+			<option>글자색</option>
+			<option value="white">하양</option>
+			<option value="silver" style="background-color: silver">실버</option>
+			<option value="gray" style="background-color: gray">회색</option>
+		</select>
+		<select id="hiliteColor">
+			<option>글자배경색</option>
+			<option value="red" style="background-color: red">빨강</option>
+			<option value="gray" style="background-color: gray">회색</option>
+			<option value="black" style="color: white; background-color: black">검정</option>
+		</select>
+		<br/><br/>
+		<div id="editorBox" contenteditable="true">내용을 입력해 주세요</div>
+	</div>
+</body>
+</html>

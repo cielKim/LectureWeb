@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+	/*h1 + h2 { h1 !바로 뒤!에 나오는 h2의 색상을 red로 바꿔라, 형제레벨에서만 가능  
+	 color: red;
+	}*/
+	
+	h1 ~ h2 { /*h1 뒤쪽에 오는 모든 h2들의 색깔을 blue로 바꿔라, 형제레벨에서만 가능*/
+		
+	color: blue;
+	
+	}
+
+
+</style>
+</head>
+<body>
+
+	<h2>Header2-1</h2>
+	<h1>Header1</h1>
+	<h3>Header3-1</h3>
+	<h2>Header2-2</h2>
+	<h2>Header2-3</h2>
+	<h2>Header2-4</h2>
+	<h1>Header1</h1>
+	<h2>Header2-1</h2>
+	<h2>Header2-2</h2>
+</body>
+</html>
